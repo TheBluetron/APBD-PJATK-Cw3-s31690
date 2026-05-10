@@ -21,6 +21,7 @@ public class ReservationsController : ControllerBase
     [HttpGet("{id:int}")]
     public IActionResult GetById(int id)
     {
+        if(StaticReservationsList.Reservations.FirstOrDefault(x=> x.Id == id) == null) return NotFound();
         return Ok(StaticReservationsList.Reservations.FirstOrDefault(x=> x.Id == id));
     }
 

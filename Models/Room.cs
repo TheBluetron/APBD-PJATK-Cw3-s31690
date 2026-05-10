@@ -2,12 +2,12 @@
 
 public class Room
 {
-    private int lastId = 1;
+    private static int _lastId = 1;
     public int Id  { get; private set; }
 
     public Room()
     {
-        Id = lastId++;
+        Id = _lastId++;
     }
     public string Name { get; set; }
     public string BuildingCode { get; set; }

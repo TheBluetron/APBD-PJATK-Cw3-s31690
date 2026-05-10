@@ -11,12 +11,14 @@ public class RoomsController : ControllerBase
     [HttpGet("{id:int}")]
     public IActionResult GetById(int id)
     {
+        if (StaticRoomsList.Rooms.FirstOrDefault(x => x.Id == id) == null) return NotFound();
         return Ok(StaticRoomsList.Rooms.FirstOrDefault(x => x.Id == id));
     }
 
     [HttpGet("/api/[controller]/building/{buildingCode}")]
     public IActionResult GetByBuildingCode([FromRoute] string buildingCode)
     {
+        if(StaticRoomsList.Rooms.Where(x=> x.BuildingCode ==  buildingCode)==null) return NotFound();
         return Ok(StaticRoomsList.Rooms.Where(x=> x.BuildingCode ==  buildingCode).ToList());
     }
     [HttpGet]
@@ -42,8 +44,17 @@ public class RoomsController : ControllerBase
     {
         if(room == null) return BadRequest("Room is null");
         if(room.Name == null || room.BuildingCode == null) return BadRequest("Room name or building code is null");
-        StaticRoomsList.Rooms[id] = room;
-        return Ok();
+        int index = 0;
+        foreach (var r in StaticRoomsList.Rooms)
+        {
+            if (r.Id == id)
+            {
+                StaticRoomsList.Rooms[index] = room;
+                return Ok();
+            }
+            index++;
+        }
+        return NotFound("Room with that id not found");
     }
 
     [HttpDelete("{id:int}")]
