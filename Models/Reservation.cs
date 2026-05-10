@@ -2,12 +2,12 @@
 
 public class Reservation
 {
-    public int id { get; set; }
-    public int roomID { get; set; }
-    public string organizerName { get; set; }
-    public string topic { get; set; }
-    public DateTime date { get; set; }
-    public DateTime startTime { get; set; }
-    public DateTime endTime { get; set; }
-    public string status { get; set; } // planned, confirmed, cancelled
+    public int Id { get; set; }
+    public int RoomId { get; set; }
+    public string OrganizerName { get; set; } = string.Empty;
+    public string Topic { get; set; } = string.Empty;
+    public DateTime Date { get; set; }
+    public TimeOnly StartTime { get; set; }
+    public TimeOnly EndTime { get; set; }
+    public Enumerators.Status Status { get; set; } // planned, confirmed, cancelled
 }
