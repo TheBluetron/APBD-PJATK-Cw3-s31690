@@ -8,43 +8,39 @@ public class StaticRoomsList
     {
         new Room
         {
-            id = 1,
-            name = "Grand Saloon",
-            buildingCode = "4A",
-            floor = 0,
-            capacity = 120,
-            hasProjector = false,
-            isActive = false
+            Name = "Grand Saloon",
+            BuildingCode = "4A",
+            Floor = 0,
+            Capacity = 120,
+            HasProjector = false,
+            IsActive = false
         },
         new Room
         {
-            id = 2,
-            name = "Banquet Hall",
-            buildingCode = "4A",
-            floor = 1,
-            capacity = 80,
-            hasProjector = true,
-            isActive = true
+            Name = "Banquet Hall",
+            BuildingCode = "4A",
+            Floor = 1,
+            Capacity = 80,
+            HasProjector = true,
+            IsActive = true
         },
         new Room
         {
-            id = 3,
-            name = "Tent",
-            buildingCode = "6B",
-            floor = 0,
-            capacity = 40,
-            hasProjector = true,
-            isActive = true
+            Name = "Tent",
+            BuildingCode = "6B",
+            Floor = 0,
+            Capacity = 40,
+            HasProjector = true,
+            IsActive = true
         },
         new Room
         {
-            id = 4,
-            name = "Top Floor",
-            buildingCode = "1",
-            floor = 20,
-            capacity = 15,
-            hasProjector = true,
-            isActive = true
+            Name = "Top Floor",
+            BuildingCode = "1",
+            Floor = 20,
+            Capacity = 15,
+            HasProjector = true,
+            IsActive = true
         }
     };
 }

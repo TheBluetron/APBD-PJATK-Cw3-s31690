@@ -9,7 +9,6 @@ public class StaticReservationsList
     {
         new Reservation
         {
-            Id = 1,
             RoomId = 1,
             OrganizerName = "Captain America",
             Topic = "Avengers Assemble",
@@ -17,8 +16,9 @@ public class StaticReservationsList
             StartTime = new TimeOnly(8, 0),
             EndTime = new TimeOnly(12, 0),
             Status = Status.Confirmed
-        }, new Reservation {
-            Id = 2,
+        }, 
+        new Reservation 
+        {
             RoomId = 4,
             OrganizerName = "Galileo",
             Topic = "Galileo Galilei",
@@ -26,16 +26,19 @@ public class StaticReservationsList
             StartTime = new TimeOnly(20, 0),
             EndTime = new TimeOnly(23, 45),
             Status = Status.Cancelled
-        }, new Reservation {
-            Id = 3,
+        }, 
+        new Reservation 
+        {
             RoomId = 2,
             OrganizerName = "Weddings",
             Topic = "Wedding venue",
             Date = new DateTime(2026, 4, 1),
             StartTime = new TimeOnly(0, 0),
+            EndTime = new TimeOnly(23, 59),
             Status = Status.Active
-        }, new Reservation{
-            Id = 4,
+        }, 
+        new Reservation
+        {
             RoomId = 3,
             OrganizerName = "ZUS",
             Topic = "Honorowe oddawanie krwi",
@@ -43,14 +46,15 @@ public class StaticReservationsList
             StartTime = new TimeOnly(6, 0),
             EndTime = new TimeOnly(18, 0),
             Status = Status.Confirmed
-        }, new Reservation {
-            Id = 5,
+        }, 
+        new Reservation 
+        {
             RoomId = 4,
             OrganizerName = "PJATK",
             Topic = "Impreza zarządu",
             Date = new DateTime(2026, 8, 10),
             StartTime = new TimeOnly(16, 0),
-            EndTime = new TimeOnly(24, 0),
+            EndTime = new TimeOnly(23, 59),
             Status = Status.Planned
         }
     };

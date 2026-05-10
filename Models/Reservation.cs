@@ -2,7 +2,13 @@
 
 public class Reservation
 {
-    public int Id { get; set; }
+    private int lastId = 1;
+    public int Id { get; private set; }
+
+    public Reservation()
+    {
+        Id = lastId++;
+    }
     public int RoomId { get; set; }
     public string OrganizerName { get; set; } = string.Empty;
     public string Topic { get; set; } = string.Empty;
